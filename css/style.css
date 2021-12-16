@@ -27,6 +27,20 @@ body {
     .service-box {
         margin-top: 25px;
     }
+    .navbar-brand {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .social-icons{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding-bottom: 10px;
+    }
+    .callus a{
+        display: none;
+    }
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -87,10 +101,10 @@ body {
     color: #000 !important;
 }
 .navbar-custom {
-    padding: 5px 50px;
+  /*  padding: 5px 35px;*/
     width: 100%;
     border-radius: 0px;
-    z-index: 999;
+    /*z-index: 999;*/
     margin-bottom: 0px;
     transition: all 0.5s ease-in-out;
     background-color: transparent;
@@ -109,21 +123,10 @@ body {
     color: #fff;
     text-decoration: none;
 }
-.nav-sticky.navbar-custom .navbar-nav {
-    margin-top: 0px;
-}
-.nav-sticky.navbar-custom .navbar-nav li a {
-    
-}
+
 .navbar-custom .navbar-nav li .nav-link {
     padding-right: 0px;
     padding-left: 0px;
-}
-.nav-sticky.navbar-custom .navbar-nav li.active a,
-.nav-sticky.navbar-custom .navbar-nav li a:hover,
-.nav-sticky.navbar-custom .navbar-nav li a:active {
-    color:  #003d57;
-   /* font-size: 17px;*/
 }
 
 .navbar-custom .navbar-nav li.active a:after,
@@ -153,8 +156,21 @@ body {
     border-radius: 0.25rem;
 }
 
-.dropdown-toggle::after{
-    vertical-align: middle;
+.navbar-toggler ::after{
+    vertical-align: left;
+}
+
+.nav-pills a .nav-link:hover:after,{
+    width: 100%;
+    transition: width .3s;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #e8e8e8; 
+    color: #000
+}
+
+#navbarCollapse ul li a:hover {
+    color: #23add3;
 }
 
 section{
@@ -177,6 +193,8 @@ section{
     letter-spacing: 1.5px;
     font-family: open sans,sans-serif;
 }
+
+
 /*carousal section*/
 .carousel{
     background: #fff;
@@ -187,6 +205,13 @@ section{
     min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
 }
 
+.carousel-control-prev{
+    width: 30px;
+}
+
+.carousel-control-next{
+    width: 30px;
+}
 .car-title{
     color: #026a8f;
     padding-top: 40px;
@@ -266,9 +291,9 @@ section{
 
 /*Footer*/
 .footer{
-    background: linear-gradient(
-45deg, #0085ad 0%, #003d57 100%);
+    background: linear-gradient(45deg, #0085ad 0%, #003d57 100%);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.06);
+    color: #fff;
 }
 
 .f-deco_wrap{
@@ -392,15 +417,6 @@ section{
 
 .tab a{
     color: #000;
-}
-
- .nav-pills a .nav-link:hover:after,{
-    width: 100%;
-    transition: width .3s;
-}
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #e8e8e8; 
-    color: #000
 }
 
 .h6{
@@ -597,13 +613,7 @@ width:100%;
 position:absolute;
 }
 
-#navbarCollapse ul li a {
-    color: #007fa6;
-}
 
-#navbarCollapse ul li a:hover {
-    color: #26a8f0;
-}
 
 /*breadcrumb*/
 
@@ -681,3 +691,4 @@ ul.breadcrumb li a:hover {
     background: #0092d7;
     border: none;
 }
+
